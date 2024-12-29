@@ -3,7 +3,6 @@
 const screenDisplay = document.querySelector(".screen");
 const buttons = document.querySelectorAll(".numeral");
 const operators = document.querySelectorAll(".operator");
-// const calculate = document.querySelector('.calculate')
 const calculate = document.querySelector("#equals");
 
 console.log(calculate);
@@ -21,7 +20,7 @@ let operatorLookUp = {
   // converts the user readable operator to a js usable operator
   "+": "+", // text + to js + operator
   "-": "-", // text - to js - operator
-  x: "*", // text x to js * operator
+  x: "*",   // text x to js * operator
   "÷": "/", // text alt code 0247 to js / operator
 };
 
@@ -35,6 +34,7 @@ function buttonPress(button) {
     });
 
 
+  // initialize value container  
   const value = button.textContent;
   let displayNumber;
 
@@ -70,8 +70,7 @@ function operatorPress(operator) {
   }
 
   operatorPressed = true;
-  currentOperator =
-    operatorLookUp[operator.textContent] || operator.textContent;
+  currentOperator = operatorLookUp[operator.textContent] || operator.textContent;
   console.log(currentOperator);
 }
 
@@ -150,7 +149,7 @@ calculate.addEventListener("click", () => {
 });
 
 
-// theme selector module //  
+//-- theme selector module --//  
 
 const themeList = [
     'theme-default',
@@ -164,10 +163,14 @@ const themeList = [
 
 function switchTheme(themeName) {
     const calculator = document.querySelector('.calculator-container');
+    const body = document.querySelector('body')
     // Remove any existing theme classes
     calculator.classList.remove(...themeList);
+    body.classList.remove(...themeList);
+
     // Add the new theme class
     calculator.classList.add(`theme-${themeName}`);
+    body.classList.add(`theme-${themeName}`);
 }
 
 // Get menu elements
@@ -188,7 +191,7 @@ themeButtons.forEach(button => {
     button.addEventListener('click', () => {
         const theme = button.dataset.theme;
         switchTheme(theme);
-        themeMenu.classList.add('hidden');  // Hide menu after selection
+        themeMenu.classList.add('hidden');  // hides menu after selection
     });
 });
 

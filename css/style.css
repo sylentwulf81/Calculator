@@ -1,28 +1,32 @@
 /* root psudo class for theming */
+
 :root {
+  /* Backgrounds */
+  --body-background-color: #000000; /* Page background */
+  --calc-background: #7e99a3; /* Calculator background */
+  --screen-background-color: #7e99a3; /* Calculator screen background */
 
-  /* default button color handling */
-  --btn-color: #4c585b;
-  --btn-border-width: 2px;
-  --btn-border-style: solid;
-  --btn-border-color: grey;
-  --btn-background: inherit; /* placeholder */
+  /* Text Colors */
+  --screen-text-color: black; /* Text color for the screen */
+  --btn-color: #4c585b; /* Button text color */
 
-  /* button hover color handling */
-  --btn-hover-text: beige;
-  --btn-hover-bg: inherit; /* placeholder */
-  --btn-hover-border: 2px solid beige;
+  /* Button Backgrounds */
+  --btn-background: #ffffff; /* Default button background */
+  --btn-hover-bg: #f0f0f0; /* Button hover background */
 
-  /* calculator color handling */
-  --calc-background: #7e99a3;
-  --calc-border-width: 2px;
-  --calc-border-style: solid;
-  --calc-border-color: black;
+  /* Borders */
+  --btn-border-width: 2px; /* Button border width */
+  --btn-border-style: solid; /* Button border style */
+  --btn-border-color: grey; /* Default button border color */
+  --btn-hover-border: 2px solid beige; /* Hover state button border color */
 
-  /* screen color handling */
+  /* Button Hover */
+  --btn-hover-text: beige; /* Hover state button text color */
 
-  --screen-background-color: #7e99a3;
-  --screen-text-color: black;
+  /* General Layout and Borders */
+  --calc-border-width: 2px; /* Calculator border width */
+  --calc-border-style: solid; /* Calculator border style */
+  --calc-border-color: black; /* Calculator border color */
 }
 
 /* color themes */
@@ -41,6 +45,8 @@
   
     --screen-background-color: #91AC8F;
     --screen-text-color: #4B5945;
+
+    --body-background-color: #768570;
   }
 
 
@@ -59,40 +65,47 @@
 
   --screen-background-color: #ccb2d3;
   --screen-text-color: #1e093c;
+
+  --body-background-color: #662F89 ;
 }
 
-/* Pinkie Pie theme - pinks and magentas, fun! */
+/* Pinkie Pie theme - pinks and magentas, fun on the bun! */
+
 .theme-pinkiepie {
-  --btn-color: #BB1C76; /* Light pink for buttons */
-  --btn-border-color: #ff1493  ; /* Darker pink for borders */
-  --btn-background: #ffc0cb; /* Soft pink background */
+  --btn-color: #BB1C76; /* Light pink for buttons - yay! */
+  --btn-border-color: #ff1493  ; /* Darker pink for borders - woo! */
+  --btn-background: #ffc0cb; /* Soft pink background - dawww! */
 
-  --btn-hover-text: #FAF5AB; /* White text on hover for contrast */
-  --btn-hover-bg: #7ED0F2; /* Deep pink on hover */ 
-  --btn-hover-border: #ff69b4; /* Hot pink border on hover */
+  --btn-hover-text: #FAF5AB; /* White text on hover for contrast - perfect! */
+  --btn-hover-bg: #7ED0F2; /* Deep pink on hover - sweet! */ 
+  --btn-hover-border: #ff69b4; /* Hot pink border on hover - vibrant! */
 
-  --calc-background: #ff99cc; /* Light pink calculator background */
-  --calc-border-color: #ff69b4; /* Hot pink calculator border */
+  --calc-background: #ff99cc; /* Light pink calculator background - fun! */
+  --calc-border-color: #ff69b4; /* Hot pink calculator border - sizzlin'! */
 
-  --screen-background-color: #ffe4e1; /* Misty rose for screen background */
-  --screen-text-color: #ff1493; /* Deep pink for numbers */
+  --screen-background-color: #ffe4e1; /* Misty rose for screen background - pretty! */
+  --screen-text-color: #ff1493; /* Deep pink for numbers - dramatic! */
+
+  --body-background-color: #7DD0F1 ;
 }
 
 /* Applejack theme - warm vibrant colors for everyone's favorite earth pony */
 .theme-applejack {
-  --btn-color: #ff7b54; /* Orange base for buttons - good choice! */
-  --btn-border-color: #e7d462; /* Light brown border - matches her hat */
+  --btn-color: #ff7b54; 
+  --btn-border-color: #e7d462; /* Light brown border */
   --btn-background: #FABA62 ; /* Slightly lighter orange */ 
  
-  --btn-hover-text: #EC3F41  ; /* Blonde color for hover text - nice! */
+  --btn-hover-text: #EC3F41  ; /* Blonde color for hover text */
   --btn-hover-bg: #6BB944  ; /* Darker apple red for hover */
   --btn-hover-border: #ec3f41; /* Saddle brown for hover border */
 
-  --calc-background: #ffa066; /* Light tan background - perfect! */ 
+  --calc-background: #ffa066; /* Light tan background */ 
   --calc-border-color: #ff7b54; /* Orange border */
 
   --screen-background-color: #fff8dc; /* Cornsilk color for screen */
   --screen-text-color: #8b4513; /* Dark brown for numbers */
+
+  --body-background-color: #6BB944;
 }
 
 /* Rainbow Dash theme - 20% more awesome than the other themes! */
@@ -101,10 +114,10 @@
   --btn-border-color: #5C96C9   ; /* Darker cyan for borders */
   --btn-background: #29b6f6; /* Light blue background */
 
-  --btn-hover-text: #D9539D ; /* White text on hover */
+  --btn-hover-text: #FFFFFF ; /* White text on hover */
 
-  --btn-hover-bg: linear-gradient(
-    90deg,
+  --btn-hover-bg: linear-gradient( 
+    45deg,
     #ff0000 0%,
     /* Red */ #ff9900 20%,
     /* Orange */ #ffff00 40%,
@@ -120,6 +133,8 @@
 
   --screen-background-color: #ffffff; /* White screen background */
   --screen-text-color: #EC4141 ; /* Deep blue text */
+
+  --body-background-color: linear-gradient(30deg, red, orange, yellow, green, blue, indigo, violet, red);
 }
 
 /* Rarity theme - purple and white couture eleganza! */
@@ -137,9 +152,11 @@
 
   --screen-background-color: #f3e5f5; /* Very light purple screen */
   --screen-text-color: #4a235a; /* Deep purple text */
+
+  --body-background-color: #20476B;
 }
 
-/* Fluttershy theme - soft, pastel colors...if that's ok with you...? */
+/* Fluttershy theme - soft, pastel colors...if that's...ok with you...? */
 .theme-fluttershy {
   --btn-color: #84D2D4; /* Soft butter yellow for buttons */
   --btn-border-color: #f8b5d3; /* Light pink for borders */
@@ -154,6 +171,8 @@
 
   --screen-background-color: #fffff0; /* Warm ivory screen */
   --screen-text-color: #d68b98; /* Dusty rose text */
+
+  --body-background-color: #69C8C3;
 }
 
 /* End themes */
@@ -168,13 +187,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #a5bfcc;
+  background: var(--body-background-color);
+  transition: 0.2s;
 }
 
 button {
   background-color: var(--btn-background);
 
-  border: var(--btn-border-width) var(--btn-border-style)
+  border: 
+    var(--btn-border-width) 
+    var(--btn-border-style) 
     var(--btn-border-color);
   border-radius: 50%;
 
@@ -195,7 +217,7 @@ button {
 button:hover {
   border: 2px solid var(--btn-hover-border);
   color: var(--btn-hover-text);
-  background-color: var(--btn-hover-bg);
+  background: var(--btn-hover-bg);
   transition: 0.2s;
 }
 
