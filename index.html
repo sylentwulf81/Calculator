@@ -20,7 +20,7 @@
     
 
 
-    <div class="calculator-container">
+    <div class="calculator-container theme-default">
         <div class="screen">0</div>
             <br/>
             <div class="calculator-buttons">
@@ -47,14 +47,29 @@
                 <button id="zero" class="numeral">0</button>
                 <button id="decimal" class="numeral">.</button>
                 <button id="delete" class="function">D</button>
-                <button id="equals" class="operator">=</button>
+                <button id="equals" class="calculate">=</button>
 
                 <button id="menu" class="menu">...</button>
+
+                <div class="theme-menu hidden">
+                    <div class="title">Theme</div>
+                    <button class="theme-option" data-theme="default">Default</button>
+                    <button class="theme-option" data-theme="twilight">Twilight Sparkle</button>
+                    <button class="theme-option" data-theme="pinkiepie">Pinkie Pie</button>
+                    <button class="theme-option" data-theme="applejack">Applejack</button>
+                    <button class="theme-option" data-theme="rainbowdash">Rainbow Dash</button>
+                    <button class="theme-option" data-theme="rarity">Rarity</button>
+                    <button class="theme-option" data-theme="fluttershy">Fluttershy</button>
+                </div>
+
+
 
             </div>
 
     
     </div>
+
+
 
     <script src="js/calculator.js"></script>
 

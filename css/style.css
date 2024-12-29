@@ -1,76 +1,278 @@
+/* root psudo class for theming */
+:root {
 
+  /* default button color handling */
+  --btn-color: #4c585b;
+  --btn-border-width: 2px;
+  --btn-border-style: solid;
+  --btn-border-color: grey;
+  --btn-background: inherit; /* placeholder */
+
+  /* button hover color handling */
+  --btn-hover-text: beige;
+  --btn-hover-bg: inherit; /* placeholder */
+  --btn-hover-border: 2px solid beige;
+
+  /* calculator color handling */
+  --calc-background: #7e99a3;
+  --calc-border-width: 2px;
+  --calc-border-style: solid;
+  --calc-border-color: black;
+
+  /* screen color handling */
+
+  --screen-background-color: #7e99a3;
+  --screen-text-color: black;
+}
+
+/* color themes */
+
+.theme-default {
+    --btn-color: #66785F    ;
+    --btn-border-color: #91AC8F ;
+    --btn-background: #91AC8F;
+  
+    --btn-hover-text: #B2C9AD ;
+    --btn-hover-bg: #91AC8F;
+    --btn-hover-border: #B2C9AD;
+  
+    --calc-background: #4B5945;
+    --calc-border-color: #66785F;
+  
+    --screen-background-color: #91AC8F;
+    --screen-text-color: #4B5945;
+  }
+
+
+/* Twilight theme - cool, deep colors */
+.theme-twilight {
+  --btn-color: #132248    ;
+  --btn-border-color: #FFFFFF ;
+  --btn-background: #bf89d1;
+
+  --btn-hover-text: #EA428B ;
+  --btn-hover-bg: #652d87;
+  --btn-hover-border: #ea428b;
+
+  --calc-background: #243870;
+  --calc-border-color: #565f89;
+
+  --screen-background-color: #ccb2d3;
+  --screen-text-color: #1e093c;
+}
+
+/* Pinkie Pie theme - pinks and magentas, fun! */
+.theme-pinkiepie {
+  --btn-color: #BB1C76; /* Light pink for buttons */
+  --btn-border-color: #ff1493  ; /* Darker pink for borders */
+  --btn-background: #ffc0cb; /* Soft pink background */
+
+  --btn-hover-text: #FAF5AB; /* White text on hover for contrast */
+  --btn-hover-bg: #7ED0F2; /* Deep pink on hover */ 
+  --btn-hover-border: #ff69b4; /* Hot pink border on hover */
+
+  --calc-background: #ff99cc; /* Light pink calculator background */
+  --calc-border-color: #ff69b4; /* Hot pink calculator border */
+
+  --screen-background-color: #ffe4e1; /* Misty rose for screen background */
+  --screen-text-color: #ff1493; /* Deep pink for numbers */
+}
+
+/* Applejack theme - warm vibrant colors for everyone's favorite earth pony */
+.theme-applejack {
+  --btn-color: #ff7b54; /* Orange base for buttons - good choice! */
+  --btn-border-color: #e7d462; /* Light brown border - matches her hat */
+  --btn-background: #FABA62 ; /* Slightly lighter orange */ 
+ 
+  --btn-hover-text: #EC3F41  ; /* Blonde color for hover text - nice! */
+  --btn-hover-bg: #6BB944  ; /* Darker apple red for hover */
+  --btn-hover-border: #ec3f41; /* Saddle brown for hover border */
+
+  --calc-background: #ffa066; /* Light tan background - perfect! */ 
+  --calc-border-color: #ff7b54; /* Orange border */
+
+  --screen-background-color: #fff8dc; /* Cornsilk color for screen */
+  --screen-text-color: #8b4513; /* Dark brown for numbers */
+}
+
+/* Rainbow Dash theme - 20% more awesome than the other themes! */
+.theme-rainbowdash {
+  --btn-color: #FDE85F ; /* Cyan/blue like her coat */
+  --btn-border-color: #5C96C9   ; /* Darker cyan for borders */
+  --btn-background: #29b6f6; /* Light blue background */
+
+  --btn-hover-text: #D9539D ; /* White text on hover */
+
+  --btn-hover-bg: linear-gradient(
+    90deg,
+    #ff0000 0%,
+    /* Red */ #ff9900 20%,
+    /* Orange */ #ffff00 40%,
+    /* Yellow */ #00ff00 60%,
+    /* Green */ #0000ff 80%,
+    /* Blue */ #9400d3 100% /* Violet */
+  ); /* Rainbow gradient on hover - her mane! */
+
+  --btn-hover-border: #2196f3; /* Bright blue border on hover */
+
+  --calc-background: #9BDBF5 ; /* Very light blue calculator background */
+  --calc-border-color: #2196f3; /* Blue calculator border */
+
+  --screen-background-color: #ffffff; /* White screen background */
+  --screen-text-color: #EC4141 ; /* Deep blue text */
+}
+
+/* Rarity theme - purple and white couture eleganza! */
+.theme-rarity {
+  --btn-color: #2696CB  ; /* Darker purple for better visibility */
+  --btn-border-color: #b8a9c9; /* Light purple/periwinkle for borders */
+  --btn-background: #5c4773; /* Medium purple background */
+
+  --btn-hover-text: #ffffff; /* Pure white text on hover */
+  --btn-hover-bg: #7f69a5; /* Bright purple on hover */
+  --btn-hover-border: #e3e6ff; /* Light periwinkle border on hover */
+
+  --calc-background: #eef3ff; /* Light blue-white background - her coat color */
+  --calc-border-color: #6b4e71; /* Deep purple border */
+
+  --screen-background-color: #f3e5f5; /* Very light purple screen */
+  --screen-text-color: #4a235a; /* Deep purple text */
+}
+
+/* Fluttershy theme - soft, pastel colors...if that's ok with you...? */
+.theme-fluttershy {
+  --btn-color: #84D2D4; /* Soft butter yellow for buttons */
+  --btn-border-color: #f8b5d3; /* Light pink for borders */
+  --btn-background: #E581B1   ; /* Very soft yellow background */
+
+  --btn-hover-text: #FFFFFF ; /* Soft green text on hover - like nature */
+  --btn-hover-bg: #ffb7c5; /* Gentle pink on hover */
+  --btn-hover-border: #84D2D4 ; /* Warm peach border on hover */
+
+  --calc-background: #FAF5AB  ; /* Very soft pink background */
+  --calc-border-color: #F3B5CF ; /* Light pink border */
+
+  --screen-background-color: #fffff0; /* Warm ivory screen */
+  --screen-text-color: #d68b98; /* Dusty rose text */
+}
+
+/* End themes */
+
+.title {
+  font-family: "Kanit", serif;
+  color: var(--btn-color);
+}
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #A5BFCC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a5bfcc;
 }
 
 button {
-    background-color: #4C585B;
+  background-color: var(--btn-background);
 
-    border: 2px solid grey;
-    border-radius: 50%;
+  border: var(--btn-border-width) var(--btn-border-style)
+    var(--btn-border-color);
+  border-radius: 50%;
 
-    font-family: "Kanit", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
 
-    width: 50px;
-    height: 50px;
-    margin: 4px;
+  width: 50px;
+  height: 50px;
+  margin: 4px;
 
-    font-size: 26px;
-    color: rgb(255, 255, 255)
+  font-size: 26px;
+  color: var(--btn-color);
+
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 button:hover {
-    border: 2px solid beige;
-    color: beige;
-    transition: 0.2s;
+  border: 2px solid var(--btn-hover-border);
+  color: var(--btn-hover-text);
+  background-color: var(--btn-hover-bg);
+  transition: 0.2s;
 }
 
 button:active {
-    background-color: #F4EDD3;
-    color: black;
-    scale: 0.9;
-    transition: 0.1s;
+  background-color: #f4edd3;
+  color: black;
+  scale: 0.9;
+  transition: 0.1s;
 }
 
-/* calculator syling */ 
+/* calculator syling */
 
 .calculator-container {
-    background-color: #7E99A3;
-    border: 2px solid black;
-    border-radius: 10px;
-    box-shadow: black 10px 10px 15px 0px;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 260px;
-    align-items: center;
+  background-color: var(--calc-background);
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: black 10px 10px 15px 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 260px;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 .calculator-buttons {
-    width: 232px;
-    display: flex;
-    flex-wrap: wrap;
+  width: 232px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .screen {
-    background-color: beige;
+  background-color: var(--screen-background-color);
+  color: var(--screen-text-color);
 
-    font-family: "Kanit", serif;
-    font-weight: 400;
-    font-style: normal;
+  border: 1px solid black;
 
-    width: 224px;
-    height: 60px;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: 40px;
-    text-align: end;
-    border-radius: 10px;
+  font-family: "Kanit", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  width: 224px;
+  height: 60px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 40px;
+  text-align: end;
+  border-radius: 10px;
+}
+
+/* theme menu popup styling */
+
+.calculator-container {
+  position: relative; /* Make sure this is set */
+}
+
+.theme-menu {
+  position: absolute;
+  bottom: 60px; /* Move it up above the ... button */
+  left: 10px; /* Align with left edge near ... button */
+  min-width: 100px;
+  background-color: var(--calc-background);
+  border: 1px solid var(--btn-border-color);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.theme-menu.hidden {
+  display: none;
+}
+
+.theme-option {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
 }
