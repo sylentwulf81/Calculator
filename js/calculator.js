@@ -4,6 +4,7 @@ const screenDisplay = document.querySelector(".screen");
 const buttons = document.querySelectorAll(".numeral");
 const operators = document.querySelectorAll(".operator");
 const calculate = document.querySelector("#equals");
+const backspace = document.getElementById('delete')
 
 console.log(calculate);
 
@@ -126,6 +127,37 @@ function clearAll() { // AC button press handling, resets back to default state
     currentOperator = ""; // set the current operator to empty
   }
 
+
+// delete key handling // 
+
+let currentArray; 
+
+function deleteButton() {
+
+  console.log(`Delete pressed!`)
+
+  switch(operatorPressed) {
+    case false: 
+      currentArray = calcArray1;
+      break;
+    case true: 
+      currentArray = calcArray2;
+      break;
+  }
+
+  currentArray.pop()
+
+  if (currentArray.length === 0) {
+    displayNumber = '0'
+  } else {
+    displayNumber = currentArray.join('')
+  }
+
+  console.log(currentArray)
+  screenDisplay.textContent = displayNumber;
+}
+
+
 // event listeners //
 
 // listener to add functionality to numeral keys (incl decimal key)
@@ -147,6 +179,12 @@ calculate.addEventListener("click", () => {
     return;
   }
 });
+
+// listener to add functionality to delete key and delete last element of current array 
+
+backspace.addEventListener( "click", () => deleteButton() )
+
+
 
 
 //-- theme selector module --//  
@@ -201,6 +239,10 @@ document.addEventListener('click', (event) => {
         themeMenu.classList.add('hidden');
     }
 });
+
+// Delete button handling 
+
+
 
 console.log('Menu button:', menuButton);
 console.log('Theme menu:', themeMenu);
