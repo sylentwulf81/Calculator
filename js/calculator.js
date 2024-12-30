@@ -5,6 +5,8 @@ const buttons = document.querySelectorAll(".numeral");
 const operators = document.querySelectorAll(".operator");
 const calculate = document.querySelector("#equals");
 const backspace = document.getElementById('delete')
+const percentage = document.getElementById('percentage')
+
 
 console.log(calculate);
 
@@ -58,7 +60,6 @@ function buttonPress(button) {
 
   screenDisplay.textContent = displayNumber.toLocaleString("en-US");
 
-  
 }
 
 function operatorPress(operator) {
@@ -73,6 +74,17 @@ function operatorPress(operator) {
   operatorPressed = true;
   currentOperator = operatorLookUp[operator.textContent] || operator.textContent;
   console.log(currentOperator);
+}
+
+function percentagePress() {
+  console.log(`Percentage button pressed.`)
+
+  switch(operatorPressed) {
+    case true: 
+      
+  }
+
+
 }
 
 function calculateTotal(value1, value2, operation) {
@@ -179,6 +191,11 @@ calculate.addEventListener("click", () => {
     return;
   }
 });
+
+percentage.addEventListener("click", () => percentagePress());
+
+
+
 
 // listener to add functionality to delete key and delete last element of current array 
 
