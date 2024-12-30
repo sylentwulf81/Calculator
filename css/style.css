@@ -188,45 +188,9 @@
 .main-title {
   font-family: "Kanit", serif;
   color: var(--btn-border-color);
-  font-size: calc(12px + 1vw);
+  font-size: 26px;
   width: 100%;
   text-align: left;
-}
-
-@media screen and (max-width: 480px) { /* for small screens */
-  .calculator-container {
-    padding: 10px;
-    box-shadow: none;
-  }
-
-  button {
-    font-size: 20px;
-  }
-
-  .screen {
-    font-size: 32px;
-  }
-
-  body {
-    overflow: hidden;
-    height: 100vh;
-    width: 100vh;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 320px) { /* for edge case very small screens */
-  button {
-    font-size: 18px;
-    min-width: 35px;
-    min-height: 35px;
-  }
-
-  .screen {
-    font-size: 28px;
-  }
-
 }
 
 body {
@@ -236,10 +200,15 @@ body {
   height: 100vh;
   background: var(--body-background-color);
   transition: 0.2s;
+  overflow: hidden;
 }
 
 button {
   background-color: var(--btn-background);
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
 
   border: 
     var(--btn-border-width) 
@@ -251,12 +220,11 @@ button {
   font-weight: 400;
   font-style: normal;
 
-  width: calc(25% - 8px); /* container percentage minus margin */
-  height: auto;
-  aspect-ratio: 1;
+  width: 50px; 
+  height: 50px;
   margin: 4px;
+  font-size: calc(12px + 1vw);
 
-  font-size: calc(16px + 1vw); /* adjust font size responsively */
   min-width: 40px;
   min-height: 40px;
   color: var(--btn-color);
@@ -288,19 +256,15 @@ button:active {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 260px;
+  width: 260px; 
   align-items: center;
   transition: background-color 0.3s, border-color 0.3s;
-  
-  max-width: 95vw;
-  box-sizing: border-box;
 }
 
 .calculator-buttons {
-  width: 100% !important;
+  width: 232px; 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .screen {
@@ -313,9 +277,10 @@ button:active {
   font-weight: 400;
   font-style: normal;
 
-  width: 100%;
+  width: 85%;
   max-width: 260px;
   height: 60px;
+  margin-bottom: 10px;
   padding-right: 12px;
   padding-left: 12px;
   font-size: 40px;
@@ -379,4 +344,74 @@ div.screen::-webkit-scrollbar-thumb:hover {
   margin: 5px 0;
   padding: 5px 10px;
   border-radius: 10px;
+}
+
+/* responsive handlers */ 
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  .main-title {
+    font-size: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  div.screen {
+    width: 224px;
+    font-size: 36px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .calculator-container {
+    padding: 10px;
+    box-shadow: none;
+    width: 95vw;
+    max-width: 260px; /* Match desktop max width */
+    box-sizing: border-box;
+  }
+
+  .calculator-buttons {
+    width: 100%;
+  }
+
+  button {
+    width: calc(25% - 8px);
+    height: auto;
+    aspect-ratio: 1;
+    font-size: 20px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .screen-wrapper {
+    width: 100%;
+  }
+
+  .screen {
+    font-size: 32px;
+  }
+
+  body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 320px) {
+  button {
+    font-size: 18px;
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .screen {
+    font-size: 28px;
+  }
 }
